@@ -1,25 +1,69 @@
 body {
-    background: #f2f2f5;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
-}
-
-.container {
+  }
+  
+  header.main {
+    background: url('https://s3.amazonaws.com/makeitreal/foo/main.jpg') no-repeat center center;
+    background-size: cover;
+    height: 450px;
+  }
+  
+  .logo-square {
+    width: 160px;
+    border: 5px solid white;
+    margin-top: -70px;
+  }
+  
+  .logo {
+    width: 250px;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-left: 30px;
+  }
+  
+  .nav {
+    float: right;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  
+  .nav li { 
+    float:left;
+    margin-left: 30px;
+  }
+  
+  .content {
+    background: #f0f0f0;
+    margin-top: -30px;
+    padding: 50px;
+  }
+  
+  .post {
     background: white;
-    font-size: 14px;
-    line-height: 1.6;
-    border: 1px solid #ccc;
-    margin: 10px auto;
-    padding: 10px;
-}
-
-img {
+    margin-bottom: 50px;
+  }
+  
+  .post img {
     width: 100%;
-}
-
-@media (min-width: 768px) {
-    .container, h2, p {
-        font-size: 16px;
-        width: 768px;
-    }
-}   
+  }
+  
+  .post .post-body {
+    color: #444;
+    padding: 20px;
+  }
+  
+  .post .post-footer {
+    color: #aaa;
+    font-size: 13px;
+    padding: 10px 20px;
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  /* Utility classes */
+  .row {
+    width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+  }
