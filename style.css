@@ -1,99 +1,25 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
-    color: #303030;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.ribbon {
-    background-color: #303030;
-    color: white;
-    text-align: center;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    padding: 5px 15px;
-    position: fixed;
-    bottom: 1%;
-    right: 5%;
-}
-
-h1 {
-    font-size: 42px;
-}
-
-h2 {
-    font-size: 32px;
-    border-bottom: 1px solid #ddd;
-    margin-top: 40px;
-}
-
-h3 {
-    font-size: 28px;
-}
-
-.container {
-    width: 992px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 60px;
-}
-
-.left {
-    display: inline-block;
-    width: 65%;
-}
-
-.right {
-    display: inline-block;
-    width: 35%;
-    vertical-align: top;
-}
-
-nav {
-    margin: 40px 0 0 40px;
-    padding: 20px 20px 10px;
-    position: fixed;
-}
-
-nav a {
-    display: block;
-    color: #4183c4;
-    font-size: 18px;
-    text-decoration: none;
-    padding: 0 0 10px 10px;
-}
-
-.markdown {
-    border: 1px solid #ddd;
-}
-
-pre.markdown {
-    background: whiteSmoke;
-    font-size: 16px;
-    white-space: pre-wrap;
-    padding: 20px;
+    background: #f2f2f5;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
 
-div.markdown {
-    font-size: 18px;
-    margin: -1px 0 30px;
-    padding: 10px 20px;
+.container {
+    background: white;
+    font-size: 14px;
+    line-height: 1.6;
+    border: 1px solid #ccc;
+    margin: 10px auto;
+    padding: 10px;
 }
 
-div.markdown h1 {
-    font-size: 36px;
+img {
+    width: 100%;
 }
 
-div.markdown h2 {
-    font-size: 27px;
-    border: none;
-}
-
-div.markdown h3 {
-    font-size: 21px;
-}
+@media (min-width: 768px) {
+    .container, h2, p {
+        font-size: 16px;
+        width: 768px;
+    }
+}   
