@@ -32,6 +32,7 @@ body {
   .nav li { 
     float:left;
     margin-left: 30px;
+    list-style-type: none;
   }
   
   .content {
@@ -43,14 +44,14 @@ body {
   .post {
     background: white;
     margin-bottom: 50px;
-
+    width: 600px;
+    position: relative;
+    margin: 0px auto;
   }
   
   .post img {
     width: 600px;
-    margin: 0;
-    position: relative;
-    right: center;
+
   }
   
   .post .post-body {
