@@ -21,18 +21,3 @@ a {
   justify-content: flex-end;
 }
 a:hover, a:active { color: #f04500; }
-
-//
-/* header {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  flex-basis: 10em;
-  flex-basis: 3px;
-  flex-basis: auto;
-  align-items: center;
-  overflow-wrap: nowrap;
-
-  /* Palabras clave de dimensionamiento intrínseco 
-  flex-basis: fill;
-} */
