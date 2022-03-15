@@ -1,74 +1,45 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-  }
-  
-  header.main {
-    background: url('https://s3.amazonaws.com/makeitreal/foo/main.jpg') no-repeat center center;
-    background-size: cover;
-    height: 450px;
-  }
-  
-  .logo-square {
-    width: 160px;
-    border: 5px solid white;
-    margin-top: -70px;
-  }
-  
-  .logo {
-    width: 250px;
-    vertical-align: top;
-    margin-top: 10px;
-    margin-left: 30px;
-  }
-  
-  .nav {
-    float: right;
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 30px;
-  }
-  
-  .nav li { 
-    float:left;
-    margin-left: 30px;
-    list-style-type: none;
-  }
-  
-  .content {
-    background: #f0f0f0;
-    margin-top: -30px;
-    padding: 50px;
-  }
-  
-  .post {
-    background: white;
-    margin-bottom: 50px;
-    width: 600px;
-    position: relative;
-    margin: 0px auto;
-  }
-  
-  .post img {
-    width: 600px;/* 1 */
+  font-family: 'Kalam', cursive;
+  background: #333;
+}
 
-  }
-  
-  .post .post-body {
-    color: #444;
-    padding: 20px;
-  }
-  
-  .post .post-footer {
-    color: #aaa;
-    font-size: 13px;
-    padding: 10px 20px;
-    border-top: 1px solid #f0f0f0;
-  }
-  
-  /* Utility classes */
-  .row {
-    width: 992px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+header {
+  padding: 20px;
+  /* las propiedades de Flexbox acá */
+}
+
+img { width: 363px; }
+a {
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+  margin-left: 15px;
+}
+a:hover, a:active { color: #f04500; }
+
+.box {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  flex-basis: 10em;
+  flex-basis: 3px;
+  flex-basis: auto;
+  align-items: center;
+  overflow-wrap: nowrap;
+
+  /* Palabras clave de dimensionamiento intrínseco */
+  flex-basis: fill;
+}
+
+.flexbox-item-1 {
+
+}
+.flexbox-item-2 {
+
+}
+.flexbox-item-3 {
+
+}
+.flexbox-space {
+  flex-grow: 1;
+}
