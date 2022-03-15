@@ -6,6 +6,10 @@ body {
 header {
   padding: 20px;
   /* las propiedades de Flexbox acá */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 img { width: 363px; }
@@ -14,10 +18,12 @@ a {
   font-size: 1.8rem;
   text-decoration: none;
   margin-left: 15px;
+  justify-content: flex-end;
 }
 a:hover, a:active { color: #f04500; }
 
-.box {
+//
+/* header {
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -27,19 +33,6 @@ a:hover, a:active { color: #f04500; }
   align-items: center;
   overflow-wrap: nowrap;
 
-  /* Palabras clave de dimensionamiento intrínseco */
+  /* Palabras clave de dimensionamiento intrínseco 
   flex-basis: fill;
-}
-
-.flexbox-item-1 {
-
-}
-.flexbox-item-2 {
-
-}
-.flexbox-item-3 {
-
-}
-.flexbox-space {
-  flex-grow: 1;
-}
+} */
