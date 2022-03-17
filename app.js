@@ -1,62 +1,31 @@
-function sum(a, b) {
-  return a + b;
-}
-function saluda(name) {
-  return console.log(`Hola ${name}`);
-}
-function longitud(str) {
-  //let str = []
-  return str.length;
-}
+//Hola Maker,
 
-console.log(longitud(`hola`), 1);
+// Tu misión en este reto es escribir una función llamada adjustText que ajuste un string a una longitud determinada.
 
-// Tu misión en este reto es crear una función llamada isAlive que reciba dos argumentos llamados playerName y points
+// La función debe recibir dos argumentos: un string y un número, que determina la longitud a la que se debe ajustar el string.
+// Si la longitud del string es mayor al valor del segundo parámetro, se debe cortar. De lo contrario, se debe completar con espacios.
+// La función debe retornar el string ajustado.
+const b = "hola";
+//console.log(b.charAt(4) === "");
 
-// isAlive debe retornar verdadero si playerName es igual a "ikk" y points es mayor a 30,
-//  o si playerName es igual a "gut" y points es mayor a 10. De lo contrario, debe retornar falso.
-
-function isAlive(playerName, points) {
-  let alive = false;
-  if (
-    (playerName === "ikk" && points > 30) ||
-    (playerName === "gut" && points > 10)
-  ) {
-    alive = true;
-  }
-  return alive;
-}
-
-console.log(
-  isAlive("ikk", 31),
-  isAlive("ikk", 28),
-  isAlive("gut", 11),
-  isAlive("gut", 9)
-);
-
-function fizzBuzz(s) {
-  let fb;
-  if (s % 3 === 0 && s % 5 === 0) {
-    fb = "fizzbuzz";
-  } else if (s % 3 === 0) {
-    fb = "fizz";
-  } else if (s % 5 === 0) {
-    fb = "buzz";
+function adjustText(s, n) {
+  if (s.charAt(n) === "") {
+    for (let i = s.length; i < n; i++) {
+      s = s.concat(" ");
+    }
+    return s;
+    //console.log(s);
   } else {
-    fb = s;
+    return s.slice(0, -Math.abs(n - s.length));
   }
-  return fb;
 }
-const arr = [1, 3, 5, 15, 19];
-//otra opcion
-const fizzBuzz2 = (numero) => {
-  return numero % 5 === 0 && numero % 3 === 0
-    ? "fizzbuzz"
-    : numero % 3 === 0
-    ? "fizz"
-    : numero % 5 === 0
-    ? "buzz"
-    : numero;
-};
 
-console.log(arr.forEach((s) => console.log(fizzBuzz(s))));
+// Ejemplos:
+// adjustText("", 3); //=> "   "
+// adjustText("hola", 2); //=> "ho"
+// adjustText("Hola", 0); //=> ""
+// adjustText("Hola", 10); //=> "Hola      "
+console.log(` '${adjustText("", 3)}'
+  '${adjustText("hola", 2)}'
+  '${adjustText("Hola", 0)}'
+  '${adjustText("Hola", 10)}'`);
