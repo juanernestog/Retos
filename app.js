@@ -14,7 +14,6 @@ function adjustText(s, n) {
       s = s.concat(" ");
     }
     return s;
-    //console.log(s);
   } else {
     return s.slice(0, -Math.abs(n - s.length));
   }
@@ -29,3 +28,22 @@ console.log(` '${adjustText("", 3)}'
   '${adjustText("hola", 2)}'
   '${adjustText("Hola", 0)}'
   '${adjustText("Hola", 10)}'`);
+
+function adjustText(str, length) {
+  if (str.length > length) {
+    return str.substring(0, length);
+  } else {
+    return str + " ".repeat(length - str.length);
+  }
+}
+function adjustText(str, n) {
+  return str.length > n ? str.slice(0, n) : str.padEnd(n);
+}
+const adjustText = (text, number) => {
+  let transformed = "";
+  for (let i = 0; i < number; i++) {
+    if (text.charAt(i) === "") transformed += "5";
+    else transformed += text.charAt(i);
+  }
+  return transformed;
+};
