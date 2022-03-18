@@ -6,7 +6,7 @@ function factorial(n = 1) {
   return nFactorial;
 }
 
-console.log(factorial(5));
+//console.log(factorial(5));
 
 //----------------------Sumame ambas opciones sirven
 
@@ -57,3 +57,42 @@ function reverseWords(str) {
 //   [Math.PI, Math.E].toString1() === "[3.141592653589793,2.718281828459045]",
 //   [Math.PI, Math.E].toString1()
 // );
+
+const transform = function (arr, fun) {
+  const copyItems = [];
+  arr.forEach((arr) => {
+    copyItems.push(fun(arr));
+  });
+  return copyItems;
+};
+var duplicate = function (i) {
+  return i * 2;
+};
+print1 = transform([1, 2, 3], duplicate); // => [2, 4, 6]
+
+var increase = function (i) {
+  return i + 10;
+};
+print2 = transform([1, 2, 3], increase); // => [11, 12, 13]
+//console.log(print1, print2);
+
+const filter = function (arr, fun) {
+  const copyItems = [];
+  arr.forEach((arr) => {
+    if (fun(arr)) {
+      copyItems.push(arr);
+    }
+  });
+  return copyItems;
+};
+
+var even = function (i) {
+  return i % 2 === 0;
+};
+let print3 = filter([1, 2, 3, 4], even); // => [2, 4]
+
+var none = function (i) {
+  return false;
+};
+let print4 = filter([1, 2, 3, 4], none); // => []
+console.log(print3, print4);
