@@ -95,4 +95,35 @@ var none = function (i) {
   return false;
 };
 let print4 = filter([1, 2, 3, 4], none); // => []
-console.log(print3, print4);
+//console.log(print3, print4);
+
+//-------------------Compose-----------------------
+const compose = function (fun1, fun2) {
+  return fun2(fun1());
+};
+const greet = function () {
+  return "Bienvenidos";
+};
+const yell = function (str) {
+  return str.toUpperCase() + "!";
+};
+let print5 = compose(greet, yell); // => BIENVENIDOS!
+
+const generate = function () {
+  return 2;
+};
+const square = function (x) {
+  return x * x;
+};
+let print6 = compose(generate, square); // => 4
+//console.log(print5, print6);
+//-----------countby
+function countBy(x, n) {
+  let z = [];
+  for (let i = 1; i < n + 1; i++) {
+    z.push(x * i);
+  }
+  return z;
+}
+//console.log(countBy(1, 10), countBy(2, 5), "si");
+//--------------
