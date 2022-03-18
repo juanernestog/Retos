@@ -13,12 +13,20 @@
 
 //----------------------Sumame ambas opciones sirven
 
-const sumame = function (arr) {
-  return arr.reduce((partialSum, a) => partialSum + a, 0);
-};
+// const sumame = function (arr) {
+//   return arr.reduce((partialSum, a) => partialSum + a, 0);
+// };
 //const sumame = (arr) => arr.reduce((a, b) => a + b, 0);
 
-console.log(`${sumame([1, 1, 2, 10])}`);
+//console.log(`${sumame([1, 1, 2, 10])}`);
+
+const promediame = function (arr) {
+  if (Array.isArray(arr) && arr.length === 0) {
+    return 0;
+  }
+  return arr.reduce((partialSum, a) => partialSum + a, 0) / arr.length;
+};
+console.log(`Solucion ${promediame([])} ${promediame([1, 2, 3, 4])}`);
 
 // function reverseWords(str) {
 //   let s = str.split(" ");
