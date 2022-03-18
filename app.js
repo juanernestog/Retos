@@ -127,3 +127,21 @@ function countBy(x, n) {
 }
 //console.log(countBy(1, 10), countBy(2, 5), "si");
 //--------------
+function powersOfTwo(n) {
+  const arr = [];
+  for (let i = 0; i < n + 1; i++) {
+    arr.push(2 ** i);
+  }
+  return arr;
+}
+//console.log(powersOfTwo(0), powersOfTwo(5));
+//--------------countSheep
+const countSheeps = function (arr) {
+  let count = 0;
+  arr.forEach((element) => {
+    if (element === true) {
+      count++;
+    }
+  });
+  return count;
+};
