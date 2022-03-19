@@ -188,4 +188,9 @@ const reverseSeq = (n) => {
   arr.push();
   return arr;
 };
-//console.log(reverseSeq(12));
+const reverseSeq1 = (n) => {
+  return Array(n)
+    .fill(0)
+    .map((e, i) => n - i);
+}; // alternate solution
+console.log(reverseSeq1(12));
