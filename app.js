@@ -126,7 +126,7 @@ function countBy(x, n) {
   return z;
 }
 //console.log(countBy(1, 10), countBy(2, 5), "si");
-//--------------
+//--------------powersOfTwo
 function powersOfTwo(n) {
   const arr = [];
   for (let i = 0; i < n + 1; i++) {
@@ -145,3 +145,23 @@ const countSheeps = function (arr) {
   });
   return count;
 };
+//---------------order
+const order = function (arr, reverse) {
+  if (reverse === true) {
+    arr = arr.sort(function (a, b) {
+      return b - a;
+    });
+    return arr;
+    console.log(`entre`);
+  } else {
+    arr = arr.sort(function (a, b) {
+      return a - b;
+    });
+    return arr;
+  }
+};
+console.log(
+  order([1, 2, 3, 8], true), //=> [3, 2, 1]
+  order([5, 2, 10, 3, 4]),
+  order([25, 10, 1, 1, 5, 14], true)
+);
