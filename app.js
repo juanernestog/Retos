@@ -152,7 +152,6 @@ const order = function (arr, reverse) {
       return b - a;
     });
     return arr;
-    console.log(`entre`);
   } else {
     arr = arr.sort(function (a, b) {
       return a - b;
@@ -160,8 +159,18 @@ const order = function (arr, reverse) {
     return arr;
   }
 };
-console.log(
-  order([1, 2, 3, 8], true), //=> [3, 2, 1]
-  order([5, 2, 10, 3, 4]),
-  order([25, 10, 1, 1, 5, 14], true)
-);
+// console.log(
+//   order([1, 2, 3, 8], true), //=> [3, 2, 1]
+//   order([5, 2, 10, 3, 4]),
+//   order([25, 10, 1, 1, 5, 14], true)
+// );
+// contains 1-3 in first digit RegExp
+let x = [123, 248, 8, 321, 9453];
+let expReg = /[1-3]/;
+
+function validateCode(code) {
+  return /^[123]/.test(code);
+}
+// x.forEach((e) => {
+//   console.log(validateCode(e));
+// });
