@@ -179,3 +179,13 @@ function maps(x) {
   return x.map((n) => n * 2);
 }
 //console.log(maps(x));
+//------------Reversed sequence
+const reverseSeq = (n) => {
+  const arr = [];
+  for (let i = n; i > 0; i--) {
+    arr.push(i);
+  }
+  arr.push();
+  return arr;
+};
+//console.log(reverseSeq(12));
