@@ -174,3 +174,8 @@ function validateCode(code) {
 // x.forEach((e) => {
 //   console.log(validateCode(e));
 // });
+//-------map function
+function maps(x) {
+  return x.map((n) => n * 2);
+}
+//console.log(maps(x));
