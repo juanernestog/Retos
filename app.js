@@ -213,6 +213,11 @@ function points(games) {
   });
   return points;
 }
+const points1 = (games) =>
+  games.reduce((output, current) => {
+    return (output +=
+      current[0] > current[2] ? 3 : current[0] === current[2] ? 1 : 0);
+  }, 0);
 //Test logs
 // const games = ["3:1", "2:2", "0:1"];
 // console.log(`Puntos de Equipo 1: ${points(games)}`);
