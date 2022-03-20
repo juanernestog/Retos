@@ -193,4 +193,26 @@ const reverseSeq1 = (n) => {
     .fill(0)
     .map((e, i) => n - i);
 }; // alternate solution
-console.log(reverseSeq1(12));
+//console.log(reverseSeq1(12));
+//-----------Point calculator
+function points(games) {
+  let points = 0;
+  games.forEach((element) => {
+    const x = /^[0-9]/;
+    const y = /:\d/;
+    let val = [
+      x.exec(element).toString(),
+      y.exec(element).toString().replace(":", ""),
+    ];
+    val = [parseInt(val[0]), parseInt(val[1])];
+    if (val[0] > val[1]) {
+      points = points + 3;
+    } else if (val[1] == val[0]) {
+      points++;
+    }
+  });
+  return points;
+}
+//Test logs
+// const games = ["3:1", "2:2", "0:1"];
+// console.log(`Puntos de Equipo 1: ${points(games)}`);
