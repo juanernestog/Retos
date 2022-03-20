@@ -166,7 +166,7 @@ const order = function (arr, reverse) {
 // );
 // contains 1-3 in first digit RegExp
 let x = [123, 248, 8, 321, 9453];
-let expReg = /[1-3]/;
+let expReg = /^[1-3]/;
 
 function validateCode(code) {
   return /^[123]/.test(code);
@@ -221,3 +221,17 @@ const points1 = (games) =>
 //Test logs
 // const games = ["3:1", "2:2", "0:1"];
 // console.log(`Puntos de Equipo 1: ${points(games)}`);
+//------getCount---- codewars kata
+function getCount(str) {
+  const re = /[a,e,i,o,u]/g;
+  return ((str || "").match(re) || []).length;
+}
+//testing logs
+// console.log(getCount("murcielago"), 5);
+// const str = "murcielago";
+// const r = /[a,e,i,o,u]/;
+// const count = (str) => {
+//   const re = /[a,e,i,o,u]/g;
+//   return ((str || "").match(re) || []).length;
+// };
+// console.log(count(str), getCount(str));
