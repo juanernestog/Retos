@@ -235,3 +235,16 @@ function getCount(str) {
 //   return ((str || "").match(re) || []).length;
 // };
 // console.log(count(str), getCount(str));
+function filterLongWords(sentence = "", n = Infinity) {
+  //const re = `\b\w{${n},}`; // matches all words that have length 4 or more for strictly 4 clse with \b at the end
+  const regex = new RegExp(`[^ ]{${n + 1},}`, "g"); //`\\b\\w{${n + 1},}`
+  //console.log(sentence.match(regex), regex);
+  return sentence.match(regex) === null ? [] : sentence.match(regex);
+}
+// console.log(
+//   filterLongWords(
+//     "The quick brown fox jumps! over() the lazy() dog filter_long_words()",
+//     4
+//   ),
+//   filterLongWords("The quick brown fox jumps over the lazy dog")
+// );
