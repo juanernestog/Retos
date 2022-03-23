@@ -5,7 +5,6 @@ function factorial(n = 1) {
   }
   return nFactorial;
 }
-
 //console.log(factorial(5));
 
 //----------------------Sumame ambas opciones sirven
@@ -236,11 +235,12 @@ function getCount(str) {
 // };
 // console.log(count(str), getCount(str));
 function filterLongWords(sentence = "", n = Infinity) {
-  //const re = `\b\w{${n},}`; // matches all words that have length 4 or more for strictly 4 clse with \b at the end
+  const re = `\\b\\w{${n},}`; // matches all words that have length 4 or more for strictly 4 clse with \b at the end
   const regex = new RegExp(`[^ ]{${n + 1},}`, "g"); //`\\b\\w{${n + 1},}`
   //console.log(sentence.match(regex), regex);
   return sentence.match(regex) === null ? [] : sentence.match(regex);
 }
+
 // console.log(
 //   filterLongWords(
 //     "The quick brown fox jumps! over() the lazy() dog filter_long_words()",
@@ -248,3 +248,19 @@ function filterLongWords(sentence = "", n = Infinity) {
 //   ),
 //   filterLongWords("The quick brown fox jumps over the lazy dog")
 // );
+//----------friend-----------------------
+// in array of strings, friends are 4 letter strings, return a array of friends
+function friend(friends = "") {
+  const arr = [];
+  friends.forEach((e) => {
+    if (/^\w{4}$/.test(e)) {
+      arr.push(e);
+    }
+  });
+  return arr;
+}
+console.log(
+  friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"]),
+  ["Jimm", "Cari", "aret"]
+);
+console.log(friend(["Ryan", "Cool Man"]), ["Ryan"]);
