@@ -259,8 +259,8 @@ function friend(friends = "") {
   });
   return arr;
 }
-console.log(
-  friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"]),
-  ["Jimm", "Cari", "aret"]
-);
-console.log(friend(["Ryan", "Cool Man"]), ["Ryan"]);
+// console.log(
+//   friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"]),
+//   ["Jimm", "Cari", "aret"]
+// );
+// console.log(friend(["Ryan", "Cool Man"]), ["Ryan"]);
