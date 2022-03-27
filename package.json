@@ -19,5 +19,8 @@
   "homepage": "https://github.com/juanernestog/Retos#readme",
   "devDependencies": {
     "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "chai": "^4.3.6"
   }
 }

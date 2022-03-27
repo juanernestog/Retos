@@ -259,8 +259,55 @@ function friend(friends = "") {
   });
   return arr;
 }
-console.log(
-  friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"]),
-  ["Jimm", "Cari", "aret"]
-);
-console.log(friend(["Ryan", "Cool Man"]), ["Ryan"]);
+// console.log(
+//   friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"]),
+//   ["Jimm", "Cari", "aret"]
+// );
+// console.log(friend(["Ryan", "Cool Man"]), ["Ryan"]);
+
+// function reverseWords(str) {
+//   str = str.split(" ");
+//   const sol = [];
+//   str.forEach((e) => {
+//     sol.push(e.split("").reverse());
+//   });
+//   return sol.join("").replace(",", " ");
+// }
+// console.log(reverseWords("The quick brown fox jumps over the lazy dog."));
+
+function mxdiflg(a1, a2) {
+  if (!Array.isArray(a1) || !Array.isArray(a2)) {
+    return -1;
+  }
+  const mapx = a1.map((x) => x.length);
+  const mapy = a2.map((x) => x.length);
+  const x = [Math.max(...mapx), Math.min(...mapx)];
+  const y = [Math.max(...mapy), Math.min(...mapx)];
+  const yBig = Math.abs(x[1] - y[0]);
+  const xBig = Math.abs(x[0] - y[1]);
+  return yBig > xBig ? yBig : xBig;
+}
+// const s1 = [
+//   "hoqq",
+//   "bbllkw",
+//   "oox",
+//   "ejjuyyy",
+//   "plmiis",
+//   "xxxzgpsssa",
+//   "xxwwkktt",
+//   "znnnnfqknaz",
+//   "qqquuhii",
+//   "dvvvwz",
+// ];
+// const s2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"];
+// console.log(mxdiflg(s1, s2), 13);
+
+var countSheep = function (num) {
+  let sheepCount = "";
+  const template = " sheep...";
+  for (let i = 0; i < num; i++) {
+    sheepCount = `${sheepCount}${i + 1}${template}`;
+  }
+  return sheepCount;
+};
+console.log(countSheep(3));
