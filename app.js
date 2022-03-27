@@ -310,4 +310,15 @@ var countSheep = function (num) {
   }
   return sheepCount;
 };
-console.log(countSheep(3));
+//console.log(countSheep(3));
+//countSheep=n=>[...Array(n).keys()].map(x=>`${x+1} sheep...`).join``
+// alternate solution
+
+function palindrome(num) {
+  if (typeof num === "string" || !/^[\d]{1,}$/g.test(num)) {
+    return "Not valid";
+  }
+  let reverseNum = parseInt(`${num}`.split("").reverse().join(""));
+  return num === reverseNum ? true : false;
+}
+console.log(palindrome(`121`));
