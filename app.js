@@ -321,4 +321,18 @@ function palindrome(num) {
   let reverseNum = parseInt(`${num}`.split("").reverse().join(""));
   return num === reverseNum ? true : false;
 }
-console.log(palindrome(`121`));
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+  if (enteredCode !== correctCode) return false;
+  const cDate = new Date(currentDate);
+  const eDate = new Date(expirationDate);
+  return cDate <= eDate ? true : false;
+}
+
+console.log(
+  checkCoupon("123", "123", "September 5, 2014", "October 1, 2014"),
+  true
+);
+console.log(
+  checkCoupon("123a", "123", "September 5, 2014", "October 1, 2014"),
+  false
+);
