@@ -327,12 +327,16 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
   const eDate = new Date(expirationDate);
   return cDate <= eDate ? true : false;
 }
+//alternate
+// function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+//   return enteredCode === correctCode && Date.parse(expirationDate) >= Date.parse(currentDate)
+// }
+//recursive count function
+var co = 1;
+const count = function counter() {
+  return co++;
+};
 
-console.log(
-  checkCoupon("123", "123", "September 5, 2014", "October 1, 2014"),
-  true
-);
-console.log(
-  checkCoupon("123a", "123", "September 5, 2014", "October 1, 2014"),
-  false
-);
+console.log(count()); // 1
+console.log(count()); // 2
+console.log(count()); // 3
