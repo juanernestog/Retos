@@ -337,6 +337,33 @@ const count = function counter() {
   return co++;
 };
 
-console.log(count()); // 1
-console.log(count()); // 2
-console.log(count()); // 3
+// console.log(count()); // 1
+// console.log(count()); // 2
+// console.log(count()); // 3
+
+const number = function (arr) {
+  var a = 1;
+  const returntArr = [];
+  arr.forEach((e) => {
+    returntArr.push(`${a}: ${e}`);
+    a++;
+  });
+  return returntArr;
+};
+//console.log(number(["a", "b", "c", "a"]), ["a", "b", "c", "a"]);
+function rowSumOddNumbers(n) {
+  let n0 = 1;
+  let sumVal = 0;
+  for (let i = 0; i < n; i++) {
+    n0 += 2 * i;
+  }
+  for (let ip = 0; ip < n; ip++) {
+    sumVal += n0 + 2 * ip;
+  }
+  return sumVal;
+}
+//console.log(rowSumOddNumbers(4));
+//alternate solution, failed to realize the answer is n to the power of 3
+// function rowSumOddNumbers(n) {
+//   return n > 0 ? n * n * n : "Wrong Input"
+// }
