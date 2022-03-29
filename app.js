@@ -367,3 +367,13 @@ function rowSumOddNumbers(n) {
 // function rowSumOddNumbers(n) {
 //   return n > 0 ? n * n * n : "Wrong Input"
 // }
+const flatten = (arr) => [].concat(...arr);
+//console.log(flatten([[1], [2, 3], 4]));
+
+var co = 0;
+const counter = function () {
+  return function () {
+    co++;
+    return co;
+  };
+};
