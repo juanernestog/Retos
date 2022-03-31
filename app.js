@@ -378,3 +378,8 @@ function counter() {
   };
 }
 //console.log(counter());
+
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, "");
+}
+console.log(disemvowel("murcielago"));
