@@ -370,10 +370,11 @@ function rowSumOddNumbers(n) {
 const flatten = (arr) => [].concat(...arr);
 //console.log(flatten([[1], [2, 3], 4]));
 
-var co = 0;
-const counter = function () {
+function counter() {
+  var count = 0;
+
   return function () {
-    co++;
-    return co;
+    return ++count;
   };
-};
+}
+//console.log(counter());
