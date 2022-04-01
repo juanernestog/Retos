@@ -382,4 +382,11 @@ function counter() {
 function disemvowel(str) {
   return str.replace(/[aeiou]/gi, "");
 }
-console.log(disemvowel("murcielago"));
+//console.log(disemvowel("murcielago"));
+
+function gimme(triplet) {
+  let tri = [...triplet];
+  tri = tri.sort((a, b) => a - b);
+  return triplet.indexOf(tri[1]);
+}
+console.log(gimme([1, 3, 2]));
