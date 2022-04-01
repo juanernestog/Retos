@@ -389,4 +389,21 @@ function gimme(triplet) {
   tri = tri.sort((a, b) => a - b);
   return triplet.indexOf(tri[1]);
 }
-console.log(gimme([1, 3, 2]));
+//console.log(gimme([1, 3, 2]));
+//function gimme(a) { // alternative
+//   return a.indexOf(a.concat().sort(function(a, b) { return a - b })[1])
+// }
+
+function removeUrlAnchor(url) {
+  return url.replace(/#.+$/, "");
+}
+function minMax(arr = []) {
+  const r = [];
+  r.push(Math.min(...arr));
+  r.push(Math.max(...arr));
+  return r;
+}
+// alternate solution
+// function minMax(arr) {
+//   return [Math.min.apply(Math, arr), Math.max.apply(Math, arr)];
+// }
