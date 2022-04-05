@@ -482,3 +482,34 @@ Car.prototype.break = function (amount) {
   this.velocity -= amount || 1;
   return this;
 };
+
+class Bus extends Car {
+  constructor() {
+    super();
+    this.beep = function () {
+      return "BEEP!";
+    };
+  }
+}
+
+//    alternativa
+// function Bus() {
+//   Car.call(this);
+// }
+// Bus.prototype = new Car();
+// Bus.prototype.beep = function() {
+//  return "BEEP!"
+// };
+// var bus = new Bus();
+// console.log(
+//   bus.velocity, // => 0
+//   bus.accelerate(),
+//   bus.velocity, // => 1
+//   bus.accelerate(2),
+//   bus.velocity, // => 3
+//   bus.break(),
+//   bus.velocity, // => 2
+//   bus.break(2),
+//   bus.velocity, // => 0
+//   bus.beep()
+// ); // => "BEEP!"
