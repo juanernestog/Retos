@@ -470,3 +470,15 @@ const square1 = new Square(50, 60);
 // Square.prototype.calculateArea = function() {
 //   return this.width * this.height;
 // };
+
+function Car() {
+  this.velocity = 0;
+}
+Car.prototype.accelerate = function (amount) {
+  this.velocity += amount || 1;
+  return this;
+};
+Car.prototype.break = function (amount) {
+  this.velocity -= amount || 1;
+  return this;
+};
