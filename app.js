@@ -447,3 +447,26 @@ function User(name = "", email = "") {
 
 const user = new User("Juan", "juan@makeitreal.camp");
 //console.log(user.name, user.email);
+
+function Square(w, h) {
+  (this.width = w),
+    (this.height = h),
+    (this.calculateArea = function () {
+      return this.width * this.height;
+    });
+}
+const square1 = new Square(50, 60);
+// console.log(
+//   square1.width, // => 50
+//   square1.height, // => 60
+//   square1.calculateArea()
+// );
+// altrnativa usando prototype
+// var Square = function(width, height) {
+//   this.width = width;
+//   this.height = height;
+// };
+
+// Square.prototype.calculateArea = function() {
+//   return this.width * this.height;
+// };
