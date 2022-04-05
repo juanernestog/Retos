@@ -440,3 +440,10 @@ var twoSum = function (nums, target) {
 const repeater = (string = "", n = 0) => string.repeat(n);
 // console.log(repeater("hola", 3));
 // console.log(repeater("adios", 1));
+
+function User(name = "", email = "") {
+  (this.name = name), (this.email = email);
+}
+
+const user = new User("Juan", "juan@makeitreal.camp");
+//console.log(user.name, user.email);
