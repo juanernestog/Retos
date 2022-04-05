@@ -417,3 +417,22 @@ function descendingOrder(n) {
   );
 }
 //console.log(descendingOrder(16544));
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function (nums, target) {
+  console.log(`entro`);
+
+  for (let i = 0; i <= nums.length; i++) {
+    for (let x = 0; x <= nums.length; x++) {
+      if (x !== i && nums[i] + nums[x] === target) {
+        return [i, x];
+      }
+    }
+  }
+  return [0, 0];
+};
+//console.log(twoSum([3, 2, 4], 6));
