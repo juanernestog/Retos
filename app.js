@@ -513,3 +513,45 @@ class Bus extends Car {
 //   bus.velocity, // => 0
 //   bus.beep()
 // ); // => "BEEP!"
+
+class Bus extends Car {
+  constructor() {
+    super();
+    this.beep = function () {
+      return "BEEP!";
+    };
+  }
+}
+
+//    alternativa
+// function Bus() {
+//   Car.call(this);
+// }
+// Bus.prototype = new Car();
+// Bus.prototype.beep = function() {
+//  return "BEEP!"
+// };
+// var bus = new Bus();
+// console.log(
+//   bus.velocity, // => 0
+//   bus.accelerate(),
+//   bus.velocity, // => 1
+//   bus.accelerate(2),
+//   bus.velocity, // => 3
+//   bus.break(),
+//   bus.velocity, // => 2
+//   bus.break(2),
+//   bus.velocity, // => 0
+//   bus.beep()
+// ); // => "BEEP!"
+
+function maximo(...args) {
+  return Math.max(...args);
+}
+function minimo(...args) {
+  return Math.min(...args);
+}
+// console.log(
+//   maximo(5, 10, 20, 50, 32), //=> 50
+//   minimo(3, 44, 2, 8)
+// ); //=> 2
