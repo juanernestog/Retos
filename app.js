@@ -436,3 +436,7 @@ var twoSum = function (nums, target) {
   return [0, 0];
 };
 //console.log(twoSum([3, 2, 4], 6));
+
+const repeater = (string = "", n = 0) => string.repeat(n);
+// console.log(repeater("hola", 3));
+// console.log(repeater("adios", 1));
