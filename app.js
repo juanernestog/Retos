@@ -407,3 +407,13 @@ function minMax(arr = []) {
 // function minMax(arr) {
 //   return [Math.min.apply(Math, arr), Math.max.apply(Math, arr)];
 // }
+function descendingOrder(n) {
+  return parseInt(
+    n
+      .toString()
+      .split("")
+      .sort((a, b) => b - a)
+      .join("")
+  );
+}
+//console.log(descendingOrder(16544));
