@@ -514,37 +514,6 @@ class Bus extends Car {
 //   bus.beep()
 // ); // => "BEEP!"
 
-class Bus extends Car {
-  constructor() {
-    super();
-    this.beep = function () {
-      return "BEEP!";
-    };
-  }
-}
-
-//    alternativa
-// function Bus() {
-//   Car.call(this);
-// }
-// Bus.prototype = new Car();
-// Bus.prototype.beep = function() {
-//  return "BEEP!"
-// };
-// var bus = new Bus();
-// console.log(
-//   bus.velocity, // => 0
-//   bus.accelerate(),
-//   bus.velocity, // => 1
-//   bus.accelerate(2),
-//   bus.velocity, // => 3
-//   bus.break(),
-//   bus.velocity, // => 2
-//   bus.break(2),
-//   bus.velocity, // => 0
-//   bus.beep()
-// ); // => "BEEP!"
-
 function maximo(...args) {
   return Math.max(...args);
 }
@@ -555,3 +524,24 @@ function minimo(...args) {
 //   maximo(5, 10, 20, 50, 32), //=> 50
 //   minimo(3, 44, 2, 8)
 // ); //=> 2
+
+function changer(str) {
+  let modified = "";
+  for (let i = 0; i < str.length; i++) {
+    // const regex = new RegExp(`(?<=.{${i}})\\w`, "gi");
+    // console.log(i, regex);
+    str.replace(str[i], function (a) {
+      let c = a.charCodeAt(0);
+      switch (c) {
+        case 90:
+          return "A";
+        case 122:
+          return "a";
+        default:
+          return (modified += String.fromCharCode(1 + c));
+      }
+    });
+  }
+  return modified;
+}
+console.log(changer("abc"));
