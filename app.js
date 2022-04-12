@@ -524,7 +524,53 @@ function minimo(...args) {
 //   maximo(5, 10, 20, 50, 32), //=> 50
 //   minimo(3, 44, 2, 8)
 // ); //=> 2
+const isPlate = (str) => /[A-Z]{3}\d{3}/.test(str);
 
+function split(str) {
+  return str.split(/[*+-]/g);
+}
+// console.log(
+//   split("Hola+Mundo"), // => ["Hola", "Mundo"]
+//   split("partir-la-cadena"), // => ["partir", "la", "cadena"]
+//   split("este-es+otro*ejemplo"), // => ["este", "es", "otro", "ejemplo"]
+//   split("")
+// ); // => [""]);
+
+//const plates = (str) => str.match(/[A-Z]{3}[0-9]{3}/g) ?? [];
+const plates = function (str) {
+  if (str.match(/[A-Z]{3}\d{3}/g) === null) {
+    return [];
+  }
+  return str.match(/[A-Z]{3}\d{3}/g);
+};
+// console.log(
+//   plates("AAA123"), // => ["AAA123"]
+//   plates("Iba en un AAA123 y después en un BBB987"), //=> ["AAA123", "BBB987"]
+//   plates("no coincide")
+// );
+
+function template(str, obj) {
+  const key = str.match(/(?<=\[)\w+(?=\])/g);
+  if (!key ?? true) {
+    return str;
+  }
+  let sol = str;
+  for (let i = 0; i < key.length; i++) {
+    const regex = new RegExp(`\\[${key[i]}\\]`, "g");
+    sol = sol.replace(regex, obj[key[i]]);
+  }
+  return sol;
+}
+// console.log(
+//   template("Hola [nombre]", { nombre: "German" }), // => "Hola German"
+//   template("Hola [nombre], tu saldo es [saldo]", {
+//     nombre: "German",
+//     saldo: 12000,
+//   }), // => "Hola German, tu saldo es 12000"
+//   template("Hola mundo", {}) // => "Hola mundo"
+// );
+
+//Step 1 is done
 function changer(str) {
   let modified = "";
   for (let i = 0; i < str.length; i++) {
