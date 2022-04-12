@@ -574,20 +574,22 @@ function template(str, obj) {
 function changer(str) {
   let modified = "";
   for (let i = 0; i < str.length; i++) {
-    // const regex = new RegExp(`(?<=.{${i}})\\w`, "gi");
-    // console.log(i, regex);
     str.replace(str[i], function (a) {
       let c = a.charCodeAt(0);
+      if (c <= 64 || c >= 123) return (modified += a);
       switch (c) {
         case 90:
-          return "A";
+          return (modified += "A");
         case 122:
-          return "a";
+          return (modified += "a");
         default:
           return (modified += String.fromCharCode(1 + c));
       }
     });
   }
+  modified = modified
+    .toLowerCase()
+    .replace(/[aeiou]/g, (w) => w.replace(/\w/, (c) => c.toUpperCase()));
   return modified;
 }
-console.log(changer("abc"));
+//console.log(`'${changer("1SD3FaZ bcz ")}'`);
