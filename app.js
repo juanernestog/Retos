@@ -593,3 +593,54 @@ function changer(str) {
   return modified;
 }
 //console.log(`'${changer("1SD3FaZ bcz ")}'`);
+
+function duplicateEncode(word) {
+  let regex;
+  let acc = word;
+  word.split("").forEach((letter) => {
+    regex = new RegExp(`[^()][${letter}]{1}`, "gi");
+    word.match(regex) > 1
+      ? (acc = acc.replace(regex, ")"))
+      : (acc = acc.replace(regex, "("));
+    console.log(acc);
+  });
+  //regex2 = new RegExp(`[${letter}]`, "gi");
+  // console.log(`[${acc.join("")}]`);
+  // word.replace(regex, "(");
+  // word.replace(/[^)]./gi, ")");
+  return acc;
+}
+function getCount(str) {
+  const re = /[a,e,i,o,u]/g;
+  return ((str || "").match(re) || []).length;
+}
+
+//console.log(duplicateEncode(`Holaaa`));
+
+function solution(str, ending) {
+  const regex = new RegExp(`${ending}$`);
+  return str.match(regex) ? true : false;
+}
+// console.log(solution("abcde", "cde"), solution("abcde", "abc"));
+
+function getTheVowels(word) {
+  let count = 0;
+  const order = ["a", "e", "i", "o", "u", "a"];
+  const vowels = word.match(/[aeiou]/g);
+  // console.log(vowels);
+  let aux = 0;
+  for (let i = 0; i < vowels.length; i++) {
+    if (vowels[i] === order[aux]) {
+      // console.log(count, aux, i, vowels[i], order[aux]);
+      count++;
+      aux++;
+      // console.log(count, aux, i, vowels[i], order[aux]);
+    }
+    if (aux === 5) {
+      aux = 0;
+    }
+  }
+  return count;
+}
+// const s = "akfheujfkgiaaaofmmfkdfuaiiie";
+// console.log(getTheVowels(s), 7);
