@@ -644,3 +644,10 @@ function getTheVowels(word) {
 }
 // const s = "akfheujfkgiaaaofmmfkdfuaiiie";
 // console.log(getTheVowels(s), 7);
+
+function squareDigits(num) {
+  const str = num.toString().split("");
+  const output = str.map((n) => n ** 2).join("");
+  return parseInt(output);
+}
+// console.log(squareDigits(9119));
