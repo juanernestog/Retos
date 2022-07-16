@@ -651,3 +651,54 @@ function squareDigits(num) {
   return parseInt(output);
 }
 // console.log(squareDigits(9119));
+
+function rank(st = "", we, n) {
+  if (st === "") return "No participants";
+  const names = st.split(",");
+  if (names.length < n) return "Not enough participants";
+
+  function letterScore(letter = "") {
+    const ascii = letter.charCodeAt(0);
+    if (ascii >= 65 && ascii <= 90) {
+      return ascii - 64;
+    } else if (ascii >= 97 && ascii <= 123) {
+      return ascii - 96;
+    }
+    return 0;
+  }
+  const score = function (name = []) {
+    const foo = (name.reduce = (acc, cur) => acc + letterScore(cur));
+    return foo;
+  };
+  const scores = names.map((name) => {
+    name.split("").length + letterScore(name);
+  });
+  console.log(`scores: ${scores}`);
+
+  const sorted = scores.sort((a, b) => b - a);
+  return names[sorted.indexOf(we)];
+}
+// const names = "COLIN,AMANDBA,AMANDAB,CAROL,PauL,JOSEPH";
+// const weights = [1, 4, 4, 5, 2, 1];
+// const n = 4;
+// console.log(rank(names, weights, n), "PauL");
+// console.log(
+//   rank(
+//     "Addison,Jayden,Sofia,Michael,Andrew,Lily,Benjamin",
+//     [4, 2, 1, 4, 3, 1, 2],
+//     4
+//   ),
+//   "Benjamin"
+// );
+
+function chain(input, fs) {
+  // implement the "chain" function
+  let currentVal = input;
+  for (const fun of fs) {
+    console.log(`currentVal: ${currentVal}`, `fun: ${fun}`);
+
+    currentVal = fun(currentVal);
+  }
+  return currentVal;
+}
+console.log(chain(1, [Math.sqrt, Math.abs]));

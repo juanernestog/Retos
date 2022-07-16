@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/juanernestog/Retos#readme",
   "devDependencies": {
-    "jest": "^27.5.1"
+    "@types/node": "^18.0.5",
+    "jest": "^27.5.1",
+    "tslib": "^2.4.0"
   },
   "dependencies": {
     "chai": "^4.3.6"
