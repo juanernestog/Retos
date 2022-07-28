@@ -701,4 +701,22 @@ function chain(input, fs) {
   }
   return currentVal;
 }
-console.log(chain(1, [Math.sqrt, Math.abs]));
+// console.log(chain(1, [Math.sqrt, Math.abs]));
+
+function isValidIP(str) {
+  const regex =
+    /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/;
+  return regex.test(str);
+  // ^(?!0)\d{1,3}\.(?!0)\d{1,3}\.(?!0)\d{1,3}\.(?!0)\d{1,3}$
+}
+function smallEnough(a, limit) {
+  // return a.every((n) => n <= limit);
+  const fails = a.reduce((n) => n >= limit);
+  return !fails;
+}
+
+function createPhoneNumber(numbers) {
+  return `(${numbers.slice(0, 3).join("")}) ${numbers
+    .slice(3, 6)
+    .join("")}-${numbers.slice(6, 11).join("")}`;
+}
