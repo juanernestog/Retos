@@ -720,3 +720,23 @@ function createPhoneNumber(numbers) {
     .slice(3, 6)
     .join("")}-${numbers.slice(6, 11).join("")}`;
 }
+
+function pigIt(str) {
+  let pigged = "";
+  const words = str.split(" ");
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length === 1 && i < words.length - 1) {
+      const newWord = `${words[i]}ay`;
+      pigged = `${pigged} ${newWord}`;
+    } else if (words[i].length === 1 && i === words.length - 1) {
+      const newWord = `${words[i]}`;
+      pigged = `${pigged} ${newWord}`;
+    } else {
+      const newWord = `${words[i].slice(1)}${words[i][0]}ay`;
+      pigged = `${pigged} ${newWord}`;
+    }
+  }
+  return pigged.slice(1);
+}
+// console.log(`${pigIt("Pig latin is cool")}`, "igPay atinlay siay oolcay");
+// console.log(`${pigIt("O tempora o moresm !")}`, "Oay emporatay oay oresmmay !");
